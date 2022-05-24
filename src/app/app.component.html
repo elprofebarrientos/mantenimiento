@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12" align="center">
+      <h1>Administra tu taller</h1>
+    </div>
+
+  <div class="row">
+    <div class="col-4"></div>
+<div class="col-4">
+  <form [formGroup]="ingresoForm" (ngSubmit)="submit()" >
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" formControlName="documento" required>
+      <label for="floatingInput">Documento</label>
+      <span *ngIf="this.ingresoForm.get('documento')?.errors?.['required']">
+        (El documento no puede quedar vacío)
+      
+      </span>
+      <div>{{resultado}}</div>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" required>
+      <label for="floatingPassword">Clave</label>
+    </div>
+     
+     <br>
+    <button type="submit" class="btn btn-primary">Entrar</button>
+  </form>
+
+</div>
+<div class="col-4">
+  
+</div>
+  </div>
+  <div class="row" >
+    <div class="col-4">
+      
+    </div>
+    <div class="col-4">
+      <br>
+      Solicitar revisiòn
+    </div>
+
+  </div>
+  </div>
+  </div>
